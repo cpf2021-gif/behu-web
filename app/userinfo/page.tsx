@@ -9,11 +9,10 @@ import {
 } from "@/components/ui/avatar"
 
 type User = {
-    login: string
+    username: string
     id: number
     avatar_url: string
     email: string
-    bio: string
 }
 
 // export const fetchCache = 'default-no-store'
@@ -21,7 +20,7 @@ type User = {
 export default async function Home() {
     const user: User = await ky.get(`http://localhost:8000/user`, { cache: 'no-store' }).json()
 
-    if (!user.login) {
+    if (!user.username) {
         return (
             <div className="flex justify-center items-center h-screen">
                 <div className="text-center">
@@ -31,7 +30,7 @@ export default async function Home() {
         )
     }
 
-    const shortUserName: string = user.login.length > 2 ? user.login.substring(0, 2).toUpperCase() : user.login[0].toUpperCase()
+    const shortUserName: string = user.username.length > 2 ? user.username.substring(0, 2).toUpperCase() : user.username[0].toUpperCase()
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -43,7 +42,7 @@ export default async function Home() {
                         <AvatarFallback>{shortUserName}</AvatarFallback>
                     </Avatar>
                 </div>
-                <HoverCardDemo username={user.login} bio={user.bio} />
+                <HoverCardDemo username={user.username} />
             </div>
         </div>
     );

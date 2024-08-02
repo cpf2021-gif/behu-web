@@ -9,10 +9,9 @@ import {
 
 type HoverCardDemoProps = {
     username: string
-    bio: string
 }
 
-export function HoverCardDemo({ username, bio }: HoverCardDemoProps) {
+export function HoverCardDemo({ username }: HoverCardDemoProps) {
     return (
         <>
             <HoverCard>
@@ -23,7 +22,7 @@ export function HoverCardDemo({ username, bio }: HoverCardDemoProps) {
                     <div className="flex justify-between space-x-4">
                         <div >
                             <p className="text-sm">
-                                {bio}
+                                {"say something about yourself"}
                             </p>
                             <div className="flex items-center pt-2">
                                 <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
