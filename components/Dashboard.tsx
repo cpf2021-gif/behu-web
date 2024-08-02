@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label"
 import { GithubLoginButton } from "@/components/GithubLoginButtion"
 
 import behu from "@/public/behu.png"
+import { GoogleoginButton } from "./GoogleLoginButton"
 
 export function Dashboard() {
   return (
@@ -42,6 +43,7 @@ export function Dashboard() {
               Login
             </Button>
             <GithubLoginButton />
+            <GoogleoginButton />
           </div>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
