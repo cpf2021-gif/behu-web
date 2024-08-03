@@ -1,6 +1,8 @@
 'use client';
 
 import { Button } from "@/components/ui/button"
+import { GoogleOutlined } from "@ant-design/icons"
+
 
 export function GoogleoginButton() {
     const client_id = "688917827107-492dlsdpjrvf1qla4atam0ap873558ds.apps.googleusercontent.com"
@@ -19,7 +21,10 @@ export function GoogleoginButton() {
             }
             variant="outline"
             className="w-full">
-            Login with Google
+            <div className="flex items-center space-x-2">
+                <GoogleOutlined />
+                <p>Google</p>
+            </div>
         </Button>
     )
 }

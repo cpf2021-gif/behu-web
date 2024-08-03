@@ -33,4 +33,4 @@ pnpm dev
 ### 1. home page
 ![login](./doc/login.png)
 ### 2. user  [temporary]
-![alt text](./doc/user.png)
+![user](./doc/user.png)
